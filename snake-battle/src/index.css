@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg:            #0a0a0f;
+  --bg-secondary:  #12121a;
+  --bg-panel:      #0e0e18;
+  --neon-cyan:     #00fff5;
+  --neon-pink:     #ff00ff;
+  --neon-red:      #ff3366;
+  --neon-green:    #00ff66;
+  --neon-gold:     #ffd700;
+  --text-primary:  #e0e0e0;
+  --text-secondary:#888899;
+  --border-glow:   rgba(0, 255, 245, 0.25);
+  --border-dim:    rgba(0, 255, 245, 0.08);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: 'Rajdhani', 'Segoe UI', sans-serif;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Orbitron', monospace;
+  letter-spacing: 0.05em;
+}
+
+button {
+  cursor: pointer;
+  font-family: 'Orbitron', monospace;
+  border: none;
+  outline: none;
+}
+
+kbd {
+  font-family: 'Orbitron', monospace;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-glow);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.75em;
+  color: var(--neon-cyan);
+}
