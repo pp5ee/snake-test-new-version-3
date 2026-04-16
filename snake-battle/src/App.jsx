@@ -1,7 +1,6 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { useGameLoop } from './hooks/useGameLoop.js';
 import { GAME_STATE } from './game/constants.js';
-import { saveScore } from './utils/storage.js';
 import GameCanvas from './components/GameCanvas.jsx';
 import SnakeSelector from './components/SnakeSelector.jsx';
 import ControlPanel from './components/ControlPanel.jsx';
@@ -44,10 +43,10 @@ function App() {
   }, [isOver, handleRestart]);
 
   // Add keyboard listener for restart
-  useState(() => {
+  useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  });
+  }, [handleKeyDown]);
 
   return (
     <div className="app">

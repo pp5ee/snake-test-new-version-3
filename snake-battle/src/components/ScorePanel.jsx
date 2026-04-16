@@ -32,7 +32,7 @@ export default function ScorePanel({ score, renderTick }) {
           {data.history.length === 0 && (
             <div className="history-empty">暂无记录</div>
           )}
-          {data.history.slice(0, 10).map((entry, i) => (
+          {data.history.slice(0, 20).map((entry, i) => (
             <div key={i} className="history-item">
               <span className="history-rank">#{i + 1}</span>
               <span className="history-score">{entry.score}</span>
